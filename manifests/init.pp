@@ -7,9 +7,8 @@ class sudo {
     }
 
     file { '/etc/sudoers.d':
+        ensure  => directory,
         force   => true,
-        purge   => true,
-        recurse => true,
         owner   => root,
         group   => root,
         mode    => '0440',
@@ -31,6 +30,7 @@ class sudo {
     package { 'sudo':
         ensure => present,
     }
+
 }
 
 # vim: expandtab:ts=4
