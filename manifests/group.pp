@@ -1,8 +1,14 @@
-define sudo::group ($ensure='present', $group=$title, $host_group='ALL', $command='ALL', $runas_user='ALL') {
+define sudo::group (
+    $ensure='present',
+    $group=$title,
+    $host_group='ALL',
+    $command='ALL',
+    $runas_user='ALL'
+    ) {
 
     if $ensure == 'present' {
         augeas { "sudoers-grp-${group}":
-            context => "/files/etc/sudoers",
+            context => '/files/etc/sudoers',
             changes => [
                 "set spec[user = '%${group}']/user %${group}",
                 "set spec[user = '%${group}']/host_group/host ${host_group}",
@@ -13,7 +19,7 @@ define sudo::group ($ensure='present', $group=$title, $host_group='ALL', $comman
         }
     } elsif $ensure == 'absent' {
         augeas { "sudoers-grp-${group}":
-            context => "/files/etc/sudoers",
+            context => '/files/etc/sudoers',
             changes => [
                 "rm spec[*][user = '%${group}']"
             ]
