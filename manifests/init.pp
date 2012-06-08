@@ -17,15 +17,15 @@ class sudo (
     file { '/etc/sudoers.d':
         ensure  => directory,
         force   => true,
-        owner   => root,
-        group   => root,
+        owner   => 'root',
+        group   => 'root',
         mode    => '0440',
         require => Package['sudo'],
     }
 
     file { '/usr/bin/sudo':
-        owner   => root,
-        group   => root,
+        owner   => 'root',
+        group   => 'root',
         mode    => '4755',
     }
 
@@ -39,11 +39,8 @@ class sudo (
         ensure => $ensure,
     }
 
-    class { 'ssh::groups':
+    class { 'sudo::groups':
         manage      => $manage_groups,
         groupps     => $groups,
     }
-
 }
-
-# vim: expandtab:ts=4

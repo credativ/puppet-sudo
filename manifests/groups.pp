@@ -8,4 +8,3 @@ class sudo::groups (
         create_resources(sudo::group, $groups)
     }
 }
-
