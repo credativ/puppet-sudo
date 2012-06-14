@@ -62,7 +62,7 @@ class sudo (
     }
 
     class { 'sudo::groups':
-        manage  => $manage_groups,
+        ensure  => $manage_groups,
         groups  => $groups,
     }
 }
