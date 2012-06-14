@@ -63,6 +63,6 @@ class sudo (
 
     class { 'sudo::groups':
         manage      => $manage_groups,
-        groupps     => $groups,
+        groups     => $groups,
     }
 }
