@@ -12,9 +12,9 @@
 #   a hash of hashes, with groupname as key and a hash describing the
 #   group as value. See the sudo::group documentation for details about
 #   the allowed keys and defaults.
-#         
+#
 # == Usage
-# 
+#
 #
 # class {'sudo':
 #   groups  => { "sudo_users": {} }
@@ -62,7 +62,7 @@ class sudo (
     }
 
     class { 'sudo::groups':
-        manage      => $manage_groups,
-        groups     => $groups,
+        manage  => $manage_groups,
+        groups  => $groups,
     }
 }

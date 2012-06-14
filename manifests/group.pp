@@ -13,7 +13,8 @@ define sudo::group (
         "set spec[user = '%${group}']/user %${group}",
         "set spec[user = '%${group}']/host_group/host ${host_group}",
         "set spec[user = '%${group}']/host_group/command ${command}",
-        "set spec[user = '%${group}']/host_group/command/runas_user ${runas_user}",
+        "set spec[user = '%${group}']/host_group/command/runas_user \
+            ${runas_user}",
       ],
     }
   } elsif $ensure == 'absent' {
