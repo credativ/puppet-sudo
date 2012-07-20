@@ -28,7 +28,7 @@ define sudo::group (
   $group = $title,
   $host_group = 'ALL',
   $command='ALL',
-  $runas_user='ALL'
+  $runas_user='ALL',
   $tag => undef,
 ) {
 
