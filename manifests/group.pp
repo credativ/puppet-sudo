@@ -29,6 +29,7 @@ define sudo::group (
   $host_group = 'ALL',
   $command='ALL',
   $runas_user='ALL'
+  $tag => undef,
 ) {
 
   if $ensure == 'present' {
@@ -40,6 +41,9 @@ define sudo::group (
         "set spec[user = '%${group}']/host_group/command ${command}",
         "set spec[user = '%${group}']/host_group/command/runas_user \
             ${runas_user}",
+        if $tag {
+            "set spec[user = '%{group]']/host_grooup/command/tag ${tag}",
+        }
       ],
     }
   } elsif $ensure == 'absent' {
