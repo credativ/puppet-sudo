@@ -29,13 +29,14 @@ define sudo::group (
   $host_group = 'ALL',
   $command='ALL',
   $runas_user='ALL',
-  $tag => undef,
+  $tag = undef,
 ) {
 
   if $ensure == 'present' {
     augeas { "sudoers-grp-${group}":
       context => '/files/etc/sudoers',
       changes => template('sudo/sudo_group.erb')
+    }
   } elsif $ensure == 'absent' {
     augeas { "sudoers-grp-${group}":
       context => '/files/etc/sudoers',
