@@ -1,0 +1,4 @@
+manifests   etc/puppet/module/sudo
+templates   etc/puppet/module/sudo
+spec        etc/puppet/module/sudo
+README*     usr/share/doc/puppet-module-sudo
