@@ -1,1 +1,1 @@
-etc/puppet/modules/sudo
+usr/share/puppet/modules.available/sudo

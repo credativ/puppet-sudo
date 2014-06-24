@@ -1,8 +1,8 @@
-puppet-module-sudo (1.0.2) UNRELEASED; urgency=low
+puppet-module-sudo (1.0.3) unstable; urgency=low
 
   * Fix module path
 
- -- Patrick Schoenfeld <patrick.schoenfeld@credativ.de>  Thu, 05 Jun 2014 13:36:15 +0200
+ -- Patrick Schoenfeld <patrick.schoenfeld@credativ.de>  Tue, 24 Jun 2014 10:15:36 +0200
 
 puppet-module-sudo (1.0.1) unstable; urgency=low
 
