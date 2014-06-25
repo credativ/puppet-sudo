@@ -3,7 +3,7 @@
 # Defaults for the sudo class.
 
 class sudo::params {
-    $ensure         = true
+    $ensure         = present
     $manage_groups  = true
     $groups         = undef
 }

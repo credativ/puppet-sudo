@@ -1,3 +1,9 @@
+puppet-module-sudo (1.0.4) UNRELEASED; urgency=medium
+
+  * Meta-parameter ensure gets present as value, not true.
+
+ -- Bastian Blank <bastian.blank@credativ.de>  Wed, 25 Jun 2014 09:50:40 +0200
+
 puppet-module-sudo (1.0.3) unstable; urgency=low
 
   * Fix module path
