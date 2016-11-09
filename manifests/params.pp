@@ -5,6 +5,6 @@
 class sudo::params {
     $ensure         = present
     $manage_groups  = true
-    $groups         = undef
+    $groups         = {}
 }
 

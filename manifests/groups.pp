@@ -8,7 +8,7 @@
 
 class sudo::groups (
     $ensure,
-    $groups = undef,
+    $groups = {},
     ) {
 
     if $ensure {
