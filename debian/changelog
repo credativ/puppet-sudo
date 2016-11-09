@@ -1,3 +1,13 @@
+puppet-module-sudo (1.0.5) unstable; urgency=medium
+
+  [ Bastian Blank ]
+  * Add some minimal tests
+  * Add Gemfile
+  * Expect hash, not undef
+  * Also set default in sudo::params
+
+ -- Maximilian Gaß <maximilian.gass@credativ.de>  Wed, 09 Nov 2016 13:04:53 +0000
+
 puppet-module-sudo (1.0.4) unstable; urgency=medium
 
   * Meta-parameter ensure gets present as value, not true.
